@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Insurance Checkup Section</title>
+  <style>
+    /* 
+    Date created: 11 May 2025
+    Tool: OpenAI ChatGPT
+    Prompt: "Mockup a revised HTML landing section for the 'Free Insurance Check-up' offer so I can test it live, with CSS."*/
+   
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f6;
+    }
+
+    #free-checkup-offer {
+      background: #f7f9fa;
+      padding: 3rem 1rem;
+    }
+
+    .checkup-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .checkup-container h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #2d4a53;
+    }
+
+    .checkup-container p {
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 1.25rem;
+    }
+
+    form {
+      display: grid;
+      gap: 1rem;
+    }
+
+    form input,
+    form select {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    form button {
+      padding: 0.85rem;
+      background: #008060;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    form button:hover {
+      background: #00684a;
+    }
+
+    .privacy-note {
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .checkup-container h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section id="free-checkup-offer">
+    <div class="checkup-container">
+      <h1>✅ Get a Free 10-Minute Insurance Check-up</h1>
+      <p>
+        Confused about life or health insurance in Ontario? Rekha, a licensed agent, will help you understand what’s best for your needs — no pressure, no obligation.
+      </p>
+      <form id="checkupForm">
+        <input type="text" placeholder="Full Name" required />
+        <input type="tel" placeholder="Phone (WhatsApp preferred)" required />
+        <input type="email" placeholder="Email Address (optional)" />
+        <select required>
+          <option value="">What are you looking for?</option>
+          <option value="Life Insurance">Life Insurance</option>
+          <option value="Health / Critical Illness">Health / Critical Illness</option>
+          <option value="Travel Insurance">Travel Insurance</option>
+          <option value="Not Sure Yet">Not Sure Yet</option>
+        </select>
+        <button type="submit">➡️ Start My Free Check-up</button>
+      </form>
+      <p class="privacy-note">
+        🔒 100% private. You’ll be contacted within 24 hours by Rekha herself.
+      </p>
+    </div>
+  </section>
+</body>
+</html>
