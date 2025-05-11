@@ -119,7 +119,7 @@
       const email = document.getElementById('email').value;
       const interest = document.getElementById('interest').value;
       
-      const message = `Hi Rekha, my name is ${encodeURIComponent(name)}.%0AMy phone: ${encodeURIComponent(phone)}%0AEmail: ${encodeURIComponent(email)}%0AI'm interested in: ${encodeURIComponent(interest)}.`;
+      const message = `Hi Rekha, my name is ${encodeURIComponent(name)}%0AI would like to request a 10-Minute Insurance Check-up call.%0AMy phone: ${encodeURIComponent(phone)}%0AEmail: ${encodeURIComponent(email)}%0AI'm interested in: ${encodeURIComponent(interest)}.`;
 
       const whatsappNumber = '19053301216'; // Rekha's number in WhatsApp format
       const url = `https://wa.me/${whatsappNumber}?text=${message}`;
