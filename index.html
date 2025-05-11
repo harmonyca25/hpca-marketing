@@ -8,8 +8,8 @@
     /* 
     Date created: 11 May 2025
     Tool: OpenAI ChatGPT
-    Prompt: "Mockup a revised HTML landing section for the 'Free Insurance Check-up' offer so I can test it live, with CSS."*/
-   
+    Prompt: "Mockup a revised HTML landing section for the 'Free Insurance Check-up' offer so I can test it live, with CSS."
+ */
 
     body {
       margin: 0;
@@ -92,11 +92,11 @@
       <p>
         Confused about life or health insurance in Ontario? Rekha, a licensed agent, will help you understand what’s best for your needs — no pressure, no obligation.
       </p>
-      <form id="checkupForm">
-        <input type="text" placeholder="Full Name" required />
-        <input type="tel" placeholder="Phone (WhatsApp preferred)" required />
-        <input type="email" placeholder="Email Address (optional)" />
-        <select required>
+      <form id="checkupForm" onsubmit="redirectToWhatsApp(event)">
+        <input type="text" id="name" placeholder="Full Name" required />
+        <input type="tel" id="phone" placeholder="Phone (WhatsApp preferred)" required />
+        <input type="email" id="email" placeholder="Email Address (optional)" />
+        <select id="interest" required>
           <option value="">What are you looking for?</option>
           <option value="Life Insurance">Life Insurance</option>
           <option value="Health / Critical Illness">Health / Critical Illness</option>
@@ -110,5 +110,21 @@
       </p>
     </div>
   </section>
+
+  <script>
+    function redirectToWhatsApp(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const email = document.getElementById('email').value;
+      const interest = document.getElementById('interest').value;
+      
+      const message = `Hi Rekha, my name is ${encodeURIComponent(name)}.%0AMy phone: ${encodeURIComponent(phone)}%0AEmail: ${encodeURIComponent(email)}%0AI'm interested in: ${encodeURIComponent(interest)}.`;
+
+      const whatsappNumber = '9053301216'; // Rekha's number in WhatsApp format
+      const url = `https://wa.me/${whatsappNumber}?text=${message}`;
+      window.open(url, '_blank');
+    }
+  </script>
 </body>
 </html>
